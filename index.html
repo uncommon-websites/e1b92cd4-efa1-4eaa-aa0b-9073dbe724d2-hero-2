@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hero Recreation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9F9F9;
+            color: #111;
+        }
+
+        /* Custom scrollbar hiding for the tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="w-full px-6 py-6 flex items-center justify-between max-w-[1440px] mx-auto">
+        <!-- Left: Logo & Main Nav -->
+        <div class="flex items-center gap-12">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black">
+                    <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor"/>
+                </svg>
+                <span class="text-xl font-semibold tracking-tight">ScanSync</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-[15px] font-medium text-[#475569] hover:text-black transition-colors">Products</a>
+                <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">Use cases</a>
+                <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">Customers</a>
+                <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">Company</a>
+            </div>
+        </div>
+
+        <!-- Right: Secondary Nav -->
+        <div class="hidden md:flex items-center gap-8">
+            <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">View Docs</a>
+            <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">Log in</a>
+            <a href="#" class="text-[15px] font-medium text-gray-600 hover:text-black transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Hero Content -->
+    <main class="flex-grow flex flex-col items-center w-full max-w-[1440px] mx-auto px-6 mt-20 lg:mt-32">
+        
+        <!-- Text Section -->
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24">
+            <!-- Headline -->
+            <div class="lg:col-span-7">
+                <h1 class="text-5xl md:text-6xl lg:text-[5.5rem] leading-[1.1] font-medium tracking-tight text-[#111]">
+                    Real-time SAP data<br>
+                    for retail teams
+                </h1>
+            </div>
+
+            <!-- Subtext & CTA -->
+            <div class="lg:col-span-5 flex flex-col justify-center lg:pl-12 pt-4">
+                <p class="text-xl text-gray-500 leading-relaxed max-w-md">
+                    Connect your store managers to SAP with an intuitive barcode scanner. Instant product data, no training required.
+                </p>
+                <a href="#" class="mt-6 inline-flex items-center text-lg font-medium text-black hover:opacity-70 transition-opacity group">
+                    Book a Demo 
+                    <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Image / Interactive Component -->
+        <div class="w-full relative rounded-t-[2.5rem] overflow-hidden h-[600px] md:h-[700px]">
+            <!-- Background Image (Sky Placeholder) -->
+            <img src="https://imolwncbqxugevwmleed.supabase.co/storage/v1/object/public/public-assets/hero-images/e1b92cd4-efa1-4eaa-aa0b-9073dbe724d2/hero-2-img-0-1770078005930.png" alt="Sky Background" class="absolute inset-0 w-full h-full object-cover">
+            
+            <!-- Overlay to simulate clouds/texture if needed, using a gradient here for depth -->
+            <div class="absolute inset-0 bg-gradient-to-b from-blue-400/30 to-[#3b82f6]/20 mix-blend-overlay"></div>
+            
+            <!-- Real Cloud Image Placeholder (using a more textured placeholder to mimic clouds) -->
+            <img src="https://placehold.co/1400x900/3b82f6/ffffff?text=Cloud+Texture+Background" alt="Clouds" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay">
+
+
+            <!-- Content inside the image container -->
+            <div class="relative z-10 w-full h-full flex flex-col">
+                
+                <!-- Tabs Navigation -->
+                <div class="w-full px-6 py-8 overflow-x-auto no-scrollbar">
+                    <div class="flex items-center gap-2 min-w-max mx-auto md:justify-center">
+                        <button class="px-4 py-2 bg-white text-black rounded-full text-sm font-semibold shadow-sm">Inventory</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Price Check</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Stock Audit</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Order Status</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Promotions</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Warehouse</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Shipments</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Returns</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Markdown</button>
+                        <button class="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-full text-sm font-medium transition-colors">Integrations</button>
+                    </div>
+                </div>
+
+                <!-- Glassmorphism Card -->
+                <div class="flex-grow flex items-end justify-center pb-0 md:pb-12">
+                    <div class="relative w-[380px] h-[240px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden flex flex-col justify-center p-6">
+                        
+                        <!-- Top User -->
+                        <div class="flex items-center justify-between text-white mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="relative">
+                                    <img src="https://placehold.co/48x48/333/fff?text=M" alt="SKU 4022" class="w-12 h-12 rounded-full border-2 border-white/30">
+                                    <img src="https://placehold.co/16x16/firebrick/white?text=US" alt="US Flag" class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border border-white">
+                                </div>
+                                <span class="text-lg font-medium tracking-wide">Maria</span>
+                            </div>
+                            <span class="text-lg font-medium tracking-wide">In Stock: 42</span>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="flex justify-start pl-[1.6rem] my-1">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white/70">
+                                <path d="M12 4V20M12 20L18 14M12 20L6 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+
+                        <!-- Bottom User -->
+                        <div class="flex items-center justify-between text-white mt-2">
+                            <div class="flex items-center gap-3">
+                                <div class="relative">
+                                    <img src="https://placehold.co/48x48/555/fff?text=E" alt="Location A-12" class="w-12 h-12 rounded-full border-2 border-white/30">
+                                    <img src="https://placehold.co/16x16/green/white?text=MX" alt="MX Flag" class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full border border-white">
+                                </div>
+                                <span class="text-lg font-medium tracking-wide">Elena</span>
+                            </div>
+                            <span class="text-lg font-medium tracking-wide">Price: $29.99</span>
+                        </div>
+
+                        <!-- Subtle glare effect -->
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
